@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-01T10:50:17.642Z</updated>
+  <updated>2020-04-02T11:34:20.834Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2020/04/01/hello-world/"/>
-    <id>http://yoursite.com/2020/04/01/hello-world/</id>
-    <published>2020-04-01T10:50:17.630Z</published>
-    <updated>2020-04-01T10:50:17.642Z</updated>
+    <title>health</title>
+    <link href="http://yoursite.com/2020/04/02/health/"/>
+    <id>http://yoursite.com/2020/04/02/health/</id>
+    <published>2020-04-02T11:31:52.437Z</published>
+    <updated>2020-04-02T11:34:20.834Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,9 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;p&gt;使用maven来搭建工程,SOA面向服务架构(管理平台通过dubbo消费服务)&lt;/p&gt;
+&lt;p&gt;体检机构,管理员,医生,患者&lt;/p&gt;
+&lt;h2 id=&quot;技术架构&quot;&gt;&lt;a href=&quot;#技术架构&quot; class=&quot;headerlink&quot;
         
       
     
