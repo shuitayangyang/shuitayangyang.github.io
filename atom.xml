@@ -43,31 +43,4 @@
     
   </entry>
   
-  <entry>
-    <title>health - 副本</title>
-    <link href="http://yoursite.com/2020/04/02/health%20-%20%E5%89%AF%E6%9C%AC/"/>
-    <id>http://yoursite.com/2020/04/02/health%20-%20%E5%89%AF%E6%9C%AC/</id>
-    <published>2020-04-02T11:31:00.000Z</published>
-    <updated>2020-04-02T12:25:46.393Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;使用maven来搭建工程,SOA面向服务架构(管理平台通过dubbo消费服务)&lt;/p&gt;
-&lt;p&gt;体检机构,管理员,医生,患者&lt;/p&gt;
-&lt;h2 id=&quot;技术架构&quot;&gt;&lt;a href=&quot;#技术架构&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="项目" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-  </entry>
-  
 </feed>
