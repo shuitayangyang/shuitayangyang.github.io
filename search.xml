@@ -3,7 +3,9 @@
   <entry>
     <title>health</title>
     <url>/2020/04/02/health/</url>
-    <content><![CDATA[<p>使用maven来搭建工程,SOA面向服务架构(管理平台通过dubbo消费服务)</p>
+    <content><![CDATA[<hr>
+<p>title: health</p>
+<p>使用maven来搭建工程,SOA面向服务架构(管理平台通过dubbo消费服务)</p>
 <p>体检机构,管理员,医生,患者</p>
 <h2 id="技术架构"><a href="#技术架构" class="headerlink" title="技术架构:"></a>技术架构:</h2><p>前端:HTML5,bootstrap,ElementUI,Vue.js,ajax</p>
 <p>分布式架构:dubbo(分布式远程调用)+zookeeper(注册中心),springMVC </p>
@@ -116,5 +118,8 @@
 <p>在企业实际开发中，对于这种比较复杂的表格导出一般我们会提前设计一个Excel模板文件，在这个模板文件中提前将表格的结构和样式设置好，我们的程序只需要读取这个文件并在文件中的相应位置写入具体的值就可以了。</p>
 </blockquote>
 <h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4>]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
   </entry>
 </search>
