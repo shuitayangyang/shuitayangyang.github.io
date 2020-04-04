@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-04-02T12:25:46.393Z</updated>
+  <updated>2020-04-04T12:39:08.188Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>总结</title>
+    <link href="http://yoursite.com/2020/04/04/%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2020/04/04/%E6%80%BB%E7%BB%93/</id>
+    <published>2020-04-04T09:47:04.451Z</published>
+    <updated>2020-04-04T12:39:08.188Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;学习技术5步走：&lt;/p&gt;
+&lt;p&gt;   a.概念   是什么 ， 能干啥 ， 有啥用&lt;/p&gt;
+&lt;p&gt;   b.  为啥要用？  有啥 优势&lt;/p&gt;
+&lt;p&gt;   c. 流程+原理  （面试最重要的点）  底层代码 &lt;/p&gt;
+&lt;p&gt;   d.如果使用  核心api（会不会用方法
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>health</title>
