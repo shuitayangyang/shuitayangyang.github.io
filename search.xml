@@ -9,9 +9,33 @@
 <p>   c. 流程+原理  （面试最重要的点）  底层代码 </p>
 <p>   d.如果使用  核心api（会不会用方法 ，注解）</p>
 <p>   e.和项目结合 。</p>
-<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h4 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h4><p>​    关系型数据库</p>
-<p>​    事务四大特性:原子性,一致性,隔离性,持久性</p>
-<h2 id="前端技术"><a href="#前端技术" class="headerlink" title="前端技术"></a>前端技术</h2><h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><p>​    1.脚本语言(不需要编译),用于增强HTML页面,以交互式和动态的方式呈现网页</p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h4 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h4><p>​    1.关系型数据库,默认使用可重复读</p>
+<p>​    2.事务四大特性:原子性,一致性,隔离性,持久性</p>
+<p>​    3.索引:</p>
+<p>​        B+Tree，不用扫描整张表得到需要的数据，从根节点开始，存储引擎会根据指针快速寻找数据。</p>
+<p>​        index—-普通索引，unique—- 唯一索引，primary key —- 主键索引，组合索引，全文索引</p>
+<p>​    4.存储引擎 MyISAM 和 InnoDB</p>
+<p>​        InnoDB支持事务，MyISAM不支持。</p>
+<p>​        InnoDB支持外键，MyISAM不支持。</p>
+<p>​        InnoDB是默认引擎</p>
+<p>​        现在一般都选用InnoDB，主要是MyISAM的全表锁，读写串行问题，并发效率锁表，效率低，MyISAM对于    读写密集型应用一般是不会去选用的。</p>
+<p>​    5.delete、drop、truncate</p>
+<p>​        当你不再需要该表时，用 drop;</p>
+<p>​        当你仍要保留该表，但要删除所有记录时，用 truncate;</p>
+<p>​        当你要删除部分记录时, 用 delete.</p>
+<p>​        注意： 对于有主外键关系的表，不能使用truncate而应该使用不带where子句的delete语句，由于truncate不记录在日志中，不能够激活触发器</p>
+<p>​    6.分布式ID生成器</p>
+<p>​        雪花算法生成唯一主键值</p>
+<p>​        分库分表是不要使用自带的自增,会有可能不同文章生成同样的id,使用分布式ID生成器</p>
+<h2 id="前端技术"><a href="#前端技术" class="headerlink" title="前端技术"></a>前端技术</h2><h4 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h4><p>​    1.客户端和服务器端之间数据传输的格式规范,请求-响应协议,无状态协议(指协议对于事务处理没有记忆能力),解决办法：1、Cookie 2、通过Session会话保存。无连接(限制每次连接只处理一个请求)</p>
+<p>​    2.常见Http协议状态:</p>
+<p>​        200：请求被正常处理</p>
+<p>​        301：永久性重定向</p>
+<p>​        400：请求报文语法有误，服务器无法识别</p>
+<p>​        403：请求的对应资源禁止被访问</p>
+<p>​        404：服务器无法找到对应资源</p>
+<p>​        500：服务器内部错误</p>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><p>​    1.脚本语言(不需要编译),用于增强HTML页面,以交互式和动态的方式呈现网页</p>
 <p>​    2.跨平台,不依赖于操作系统,仅需要浏览器的支持。</p>
 <p>​    3.DOM处理网页内容,BOM与浏览器交互</p>
 <h4 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h4><p>​    1.是一个简洁而快速的JavaScript库,</p>
@@ -23,20 +47,26 @@
 <p><img src="/2020/04/04/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93%5Cvue.png" alt></p>
 <p>​    3.axios异步</p>
 <h4 id="ElementUI"><a href="#ElementUI" class="headerlink" title="ElementUI"></a>ElementUI</h4><p>​    1.基于Vue2.0开发,提供了丰富的PC端组件</p>
+<h4 id="NUXT"><a href="#NUXT" class="headerlink" title="NUXT"></a>NUXT</h4><p>​    1.前端页面渲染</p>
 <h4 id="uni-app"><a href="#uni-app" class="headerlink" title="uni-app"></a>uni-app</h4><p>​    1.是一个使用 <code>Vue.js</code> 开发跨平台应用的前端框架,开发者编写一套代码,可编译到<code>iOS</code>、<code>Android</code>、<code>H5</code>、小程序等多个平台。</p>
-<h4 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h4><p>​    请求-响应协议,无状态协议(指协议对于事务处理没有记忆能力),无连接(限制每次连接只处理一个请求)</p>
 <h4 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h4><p>​    在客户端保存,保存用户名密码</p>
 <h4 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h4><p>​    在服务端保存</p>
 <p>​    session 的运行依赖 session id，而 session id 是存在 cookie 中的，也就是说，如果浏览器禁用了 cookie ，同时 session 也会失效（但是可以通过其它方式实现，比如在 url 中传递 session_id）</p>
-<h4 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h4><h6 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h6><p>​    称为小服务程序或服务连接器,具有独立于平台和协议的特性,主要功能是交互式的浏览和生成数据,生成动态web内容,必须实现Servlet接口,从原理上讲，Servlet可以响应任何类型的请求，但绝大多数情况下Servlet只用来扩展基于HTTP协议的Web服务器。用来处理网络请求的一套规范.</p>
-<h6 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h6><p>​    1.收到请求后检查是否存在后创建Servlet实例对象</p>
+<h4 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h4><p>介绍</p>
+<p>​    负责处理客户请求,把结果返回给客户。交互式的浏览和生成数据,生成动态web内容,必须实现Servlet接口,用来处理网络请求的一套规范.</p>
+<p>生命周期</p>
+<p>​    1.收到请求后检查是否存在后创建Servlet实例对象</p>
 <p>​    2.调用Servlet对象的init()</p>
 <p>​    3.调用service()将请求(HttpServletRequest)和响应(HttpServletResponse)对象作为参数传递进去</p>
 <p>​    4.WEB应用程序被停止或重新启动之前，调用destroy()</p>
-<h6 id="forward-与redirect-区别"><a href="#forward-与redirect-区别" class="headerlink" title="forward()与redirect()区别?"></a>forward()与redirect()区别?</h6><p>​    forward():转发,一次请求,共享request数据,服务器行为,地址栏不变</p>
+<p>forward()与redirect()区别?</p>
+<p>​    forward():转发,一次请求,共享request数据,服务器行为,地址栏不变</p>
 <p>​    redirect():重定向,两次请求,不能共享数据,客户端行为,地址栏改变</p>
-<h4 id="JSP-Java-Server-Pages"><a href="#JSP-Java-Server-Pages" class="headerlink" title="JSP(Java Server Pages)"></a><strong>JSP</strong>(Java Server Pages)</h4><h6 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h6><p>​    动态网页技术标准,部署于服务器,响应客户端发送的请求,根据请求动态的生成web网页,实现以静态页面为模板动态生成其中部分内容,是Servlet技术的扩展,HTML+Java片段</p>
-<h4 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h4><p>（Expression Language),它提供了在 JSP 中简化表达式的方法</p>
+<h4 id="JSP-Java-Server-Pages"><a href="#JSP-Java-Server-Pages" class="headerlink" title="JSP(Java Server Pages)"></a><strong>JSP</strong>(Java Server Pages)</h4><p>​    动态网页技术标准,部署于服务器,响应客户端发送的请求,根据请求动态的生成web网页,实现以静态页面为模板动态生成其中部分内容,是Servlet技术的扩展,HTML+Java片段</p>
+<p>​    处理 JSON，通常需要配套使用 JQuery 控件</p>
+<p>​    和Servlet相比,Jsp的可读性强，容易看得懂</p>
+<p>​    有九个内置对象：request、response、out、session、application、pageContext、config、page、exception</p>
+<h4 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h4><p>​    它提供了在 JSP 中简化表达式的方法</p>
 <h4 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h4><p>​    使网页实现异步更新。</p>
 <h4 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h4><p>​    过滤器,</p>
 <h4 id="Listener"><a href="#Listener" class="headerlink" title="Listener"></a>Listener</h4><p>​    监听器,</p>
@@ -51,8 +81,8 @@
 <h4 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h4><p>​    主要服务于基于Java平台的项目构建、依赖管理和项目信息管理，为了不重复造轮子。</p>
 <h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p>​    反射是框架设计的灵魂</p>
 <h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><p>​    1.用Spring来创建对象,整合其他框架,通过反射创建对象</p>
-<p>​    2.IOC控制反转,直接在spring容器中拿对象,DI依赖注入</p>
-<p>​    3.AOP动态代理,接口jdk,继承cglib,实现程序功能的统一维护,事务管理,日志</p>
+<p>​    2.IOC控制反转,直接在spring容器中拿对象,DI依赖注入（将对象之间的依赖关系交由框架处理，减低组件的耦合性），构造器注入、setter方法注入、根据注解注入</p>
+<p>​    3.AOP动态代理,接口jdk,继承cglib,实现程序功能的统一维护,事务管理（配置文件中添加事务管理器和开启注解,@Transaction）,日志</p>
 <h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><p>​    1.和 Spring 其他框架无缝集成,是一个实现了MVC设计模式的请求驱动类型的轻量级Web框架，通过把Model，View，Controller分离，将web层进行职责解耦</p>
 <p>​    2.SpringMVC的流程:</p>
 <p>​    （1）用户发送请求至前端控制器DispatcherServlet；    </p>
@@ -74,25 +104,50 @@
 <p>​        @RequestMapping：用于处理请求 url 映射的注解，可用于类或方法上。用于类上，则表示类中的所有响应请求的方法都是以该地址作为父路径。</p>
 <p>​        @RequestBody：注解实现接收http请求的json数据，将json转换为java对象。</p>
 <p>​        @ResponseBody：注解实现将conreoller方法返回对象转化为json对象响应给客户。</p>
-<h4 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h4><p>​    1.持久层框架</p>
+<h4 id="MVC开发模式"><a href="#MVC开发模式" class="headerlink" title="MVC开发模式"></a>MVC开发模式</h4><h4 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h4><p>​    1.持久层框架</p>
 <p>​    2.sql写在xml,统一管理,优化</p>
-<p>​    3.用于复杂的查询操作。</p>
+<p>​    3.使用:依赖,application.yml配置,SpringBoot启动类包扫描,dao继承BaseMapper</p>
 <p>Mybatis-Plus</p>
+<p>​    1.性能损耗小：启动即会自动注入基本CURD ，性能无损耗，直接面向对象操作 </p>
+<p>​    2.自动热加载：Mapper对应的xml可以热加载，大大减少重启Web服务器时间，提升开发效率 </p>
+<p>​    3.性能分析：自带Sql性能分析插件，开发测试时，能有效解决慢查询 </p>
+<p>​    4.全局拦截：提供全表delete、update操作智能分析阻断 </p>
+<p>​    5.避免Sql注入：内置Sql注入内容剥离器，预防Sql注入攻击 </p>
+<p>​    6.与Mybatis的不同,依赖,配置文件</p>
 <h4 id="Spring-data-jpa"><a href="#Spring-data-jpa" class="headerlink" title="Spring data jpa"></a>Spring data jpa</h4><p>​    1.用于表的基本CRUD。</p>
-<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><p>CAP:分布式系统中,一致性(c),可用性(a),分区容错性(p),p是必须保证的</p>
 <h4 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h4><p>​    1.简化了spring的开发过程,开箱即用,远离繁琐的配置。</p>
-<p>​    2.</p>
+<p>​    2.application.yml配置文件:服务名,数据库连接,端口号</p>
+<p>​    3.@SpringBootApplication启动类</p>
 <h4 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h4><p>​    1.微服务框架的规范</p>
 <p>​    2.功能:服务注册与发现,负载均衡,服务熔断与限流,智能路由,控制总线,链路监控</p>
+<h2 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h2><p>​    CAP:分布式系统中,一致性(c),可用性(a),分区容错性(p),p是必须保证的</p>
 <h4 id="Eureka"><a href="#Eureka" class="headerlink" title="Eureka"></a>Eureka</h4><p>​    1.服务注册与发现,AP原则</p>
 <p>​    2.两大组件:Eureka Server,Eureka client</p>
 <p>​    3.应用启动后向Server发送心跳,周期三十秒,90秒没收到会移除服务节点,自我保护:为网络异常时保持高可用设计的,不会注销服务实例,直至心跳恢复</p>
 <p>​    5.集群:Eureka Server启动时默认注册自己,配置多个相互注册,高并发,高可用</p>
 <p>​    6.可以很好地应对因为网络故障导致部分节点失去连接的情况,不会像Zookeeper那样导致整个注册服务系统的瘫痪</p>
 <h4 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h4><p>​    1.RPC框架</p>
-<p>​    2.服务方与消费方远程调用</p>
+<p>​    2.服务方与消费方远程调用，将核心业务抽取出来，作为独立的服务,分布式</p>
 <h4 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h4><p>​    1.注册中心</p>
-<h4 id="Zuul"><a href="#Zuul" class="headerlink" title="Zuul"></a>Zuul</h4><p>​    1.用户认证</p>
+<h4 id="Zuul"><a href="#Zuul" class="headerlink" title="Zuul"></a>Zuul</h4><p>​    1.网关,用户认证</p>
+<p>​    2.业务流程说明如下：</p>
+<p>​        1、客户端请求认证服务进行认证。</p>
+<p>​        2、认证服务认证通过向浏览器cookie写入token(身份令牌)</p>
+<p>​            认证服务请求用户中心查询用户信息。</p>
+<p>​            认证服务请求Spring Security申请令牌。</p>
+<p>​            认证服务将token(身份令牌)和jwt令牌存储至redis中。</p>
+<p>​            认证服务向cookie写入 token(身份令牌)。</p>
+<p>​        3、前端携带token请求认证服务获取jwt令牌****</p>
+<p>​            前端获取到jwt令牌并存储在sessionStorage。</p>
+<p>​            前端从jwt令牌中解析中用户信息并显示在页面。</p>
+<p>​        4、前端携带cookie中的token身份令牌及jwt令牌访问资源服务</p>
+<p>​            前端请求资源服务需要携带两个token，一个是cookie中的身份令牌，一个是http header中的jwt令牌</p>
+<p>​            前端请求资源服务前在http header上添加jwt请求资源</p>
+<p>​        5、网关校验token的合法性</p>
+<p>​            用户请求必须携带token身份令牌和jwt令牌</p>
+<p>​            网关校验redis中token是否合法，已过期则要求用户重新登录</p>
+<p>​        6、资源服务校验jwt的合法性并完成授权</p>
+<p>​            资源服务校验jwt令牌，完成授权，拥有权限的方法正常执行，没有权限的方法将拒绝访问。</p>
 <h4 id="Spring-Security"><a href="#Spring-Security" class="headerlink" title="Spring Security"></a>Spring Security</h4><p>​    1.安全认证服务框架,原理就是在访问我们的系统前加了一系列的过滤器</p>
 <h4 id="Oauth2"><a href="#Oauth2" class="headerlink" title="Oauth2"></a>Oauth2</h4><p>​    1.客户应用向授权服务器请求令牌与授权服务器颁发令牌的过程标准化,OAuth2会提供授权请求，访问令牌和刷新令牌</p>
 <p>​    2.应用场景:</p>
@@ -109,7 +164,7 @@
 <p>​    3.生产与消费通过MQ,解耦</p>
 <p>​    4.Spring Boot默认集成</p>
 <p>​    5.工作模式:简单,工作队列,发布订阅,路由,通配符</p>
-<h4 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h4><p>​    1.存放高热点,经常查询的数据,经常修改或财务数据不放这里</p>
+<h4 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h4><p>​    1.存放高热点,经常查询的数据,经常修改或财务数据不放这里,支持事务</p>
 <p>​    2.自身是Map,数据key:value格式</p>
 <p>​    3.数据类型:String,Hash,List,Set,zset(有序集合)</p>
 <p>​    4.持久化:把内存的数据写到硬盘中,RDB(默认,性能好),AOF(安全)</p>
@@ -130,6 +185,8 @@
 </ul>
 <p>​      3、 反向代理，负载均衡。当网站的访问量达到一定程度后，单台服务器不能满足用户的请求时，需要用多台服务器集群可以使用nginx做反向代理。并且多台服务器可以平均分担负载，不会因为某台服务器负载高宕机而某台服务器闲置的情况。</p>
 <h4 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><p>​    1.是性能非常好的反向代理服务器，用来做负载均衡。隐藏真实服务端</p>
+<p>​    2.异步,减轻后端Web服务器的压力</p>
+<p>​    3.多进程机制,好处是各个进程之间相互独立，不需要加锁，减少了使用锁对性能造成影响，同时降低编程的复杂度，降低开发成本。</p>
 <h4 id="Linx"><a href="#Linx" class="headerlink" title="Linx"></a>Linx</h4><p>​    1.查看进程:ps-ef|grep</p>
 <p>​    2.查看端口:netstat -anp|grep</p>
 <p>​    3.压缩:tar -czf</p>
@@ -139,7 +196,12 @@
 <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h4 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h4><p>​    1.Docker的思想来自于集装箱,可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p>
 <p>​    2.Web 应用的自动化打包和发布。自动化测试和持续集成、发布。</p>
 <p>​    3.更快速的交付和部署,高效的部署和扩容,更高的资源利用率,更简单的管理</p>
-<h4 id><a href="#" class="headerlink" title></a></h4><h4 id="MVC开发模式"><a href="#MVC开发模式" class="headerlink" title="MVC开发模式"></a>MVC开发模式</h4><h4 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h4><h4 id="Elasticsearch"><a href="#Elasticsearch" class="headerlink" title="Elasticsearch"></a>Elasticsearch</h4><p>​    1.分布式全文检索引擎</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h4 id="Swagger"><a href="#Swagger" class="headerlink" title="Swagger"></a>Swagger</h4><p>​    1.接口测试</p>
+<p>​    2.与Nginx整合开发接口文档</p>
+<h4 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h4><p>​    1.http接口测试工具</p>
+<p>​    2.能够发送任何类型的HTTP 请求 (GET，HEAD， POST，PUT。。。) </p>
+<p>​    3.附带任意数量的参数</p>
+<h4 id><a href="#" class="headerlink" title></a></h4><h4 id="-1"><a href="#-1" class="headerlink" title></a></h4><h4 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h4><h4 id="Elasticsearch"><a href="#Elasticsearch" class="headerlink" title="Elasticsearch"></a>Elasticsearch</h4><p>​    1.分布式全文检索引擎</p>
 <p>​    2.Lucene为核心,简化操作</p>
 <p>​    3.使用logstash采集数据,同步索引库,删除信息无法使用logstash,在service方法删除课程信息时将索引库中的也删除</p>
 <p>​    4.数据分散,汇总到一张表来让logstash采集数据,部署集群</p>
@@ -148,12 +210,18 @@
 <p>​    2.模板:好说,提前编写出来;数据:编辑页面信息时定义一个dataUrl(例:由开发轮播图管理的程序员提供),读页面信息远程请求http地址,拿到数据</p>
 <p>​    3.过程:1.静态化程序读取页面信息拿到dataUrl,2.远程请求获取数据模型,3.获取页面模板,MongoDB的分布式文件系统GridFS,4.通过FreeMarker的API生成静态化文件</p>
 <h4 id="Ribbon"><a href="#Ribbon" class="headerlink" title="Ribbon"></a>Ribbon</h4><p>​    1.客户端负载均衡</p>
+<p>​    2.ribbon 负责获取注册中心的远程服务信息以及提供负载均衡功能</p>
+<h4 id="Feign"><a href="#Feign" class="headerlink" title="Feign"></a>Feign</h4><p>​    1.轻量级rest客户端,就像restTemplate 的简化,Web Service客户端</p>
 <p>​    2.</p>
-<h4 id="Feign"><a href="#Feign" class="headerlink" title="Feign"></a>Feign</h4><p>​    1.轻量级rest客户端,就像restTemplate 的简化</p>
-<p>​    2.</p>
-<h4 id="Swagger"><a href="#Swagger" class="headerlink" title="Swagger"></a>Swagger</h4><p>​    1.接口测试</p>
-<h4 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h4><p>​    1.http接口测试工具</p>
 <h4 id="Apollo"><a href="#Apollo" class="headerlink" title="Apollo"></a>Apollo</h4><p>​    1.配置管理中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性。</p>
+<h4 id="RESTful架构风格"><a href="#RESTful架构风格" class="headerlink" title="RESTful架构风格"></a>RESTful架构风格</h4><p>​    1.7个HTTP方法：GET、POST、PUT、DELETE、PATCH、HEAD、OPTIONS</p>
+<p>​    2.网络通信规范,rest风格是用来描述接口的,http 接口按照rest风格设计就是 restfull http</p>
+<p>​    3.幂等性：不论你请求多少次，资源的状态是一样的。</p>
+<p>​    4.常见请求返回响应码:</p>
+<p>​        200,请求成功</p>
+<p>​        400,客户端请求的语法错误，服务器无法理解(例:接口接受数字,请求发送的中文)</p>
+<p>​        404,资源没找到</p>
+<p>​        500,服务器内部错误，无法完成请求 ,逻辑,代码等错误</p>
 ]]></content>
   </entry>
 </search>
